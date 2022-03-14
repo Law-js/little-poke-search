@@ -6,9 +6,14 @@ const App = () => {
   const [saveData, setSaveData] = useState<string[]>([]);
 
   const findPokemon = async (val: string) => {
+    const str = val.trim();
+
+    if (!str.length) return;
+
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + val);
       const json = await res.json();
+
       setSaveData([...saveData, `<img src=${json.sprites.front_default} />`]);
     } catch (err) {
       setSaveData([...saveData, `${val} not found`]);
@@ -18,6 +23,7 @@ const App = () => {
 
   const onChanged = (evt: ChangeEvent<HTMLInputElement>) => {
     const val = evt.currentTarget.value;
+
     setSearch(val);
 
     setDelayContent(val);
