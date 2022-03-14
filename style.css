@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+.App {
+  padding: 1em;
+  background-color: #282c34;
+  height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+.searchBar input {
+  font-size: 1em;
+  padding: 0.2em;
+}
