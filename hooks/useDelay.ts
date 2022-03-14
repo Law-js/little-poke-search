@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 const useDelay = (callback: Function, timer: number) => {
   const [params, setParams] = useState<any[]>([]);
   const timePointer = useRef<number | null>(null);
-  const firstLoad = useRef(false);
+  const firstLoad = useRef(false); // first render
 
   const setDelayContent = (...params: any[]) => {
     setParams(params);
